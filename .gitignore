@@ -2,5 +2,4 @@ build/
 vendor/
 phploc.xml
 .phpunit.result.cache
-phpunit.xml
 tests/storage/*.key
