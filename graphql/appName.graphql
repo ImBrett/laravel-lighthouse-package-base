@@ -1,0 +1,9 @@
+type TestResponse {
+  status: String
+  message: String
+}
+
+extend type Query {
+  test: TestResponse!
+    @field(resolver: "ImBrett\\AppName\\GraphQL\\Queries\\Test")
+}
