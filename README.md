@@ -1,6 +1,7 @@
 # Laravel Lighthouse Package Base
 ## A base package for developing laravel plugins that require lighthouse-php
 ![Test Coverage Badge](./cover-badge.svg)
+![Current Build Status](https://travis-ci.com/ImBrett/laravel-lighthouse-package-base.svg?branch=master)
 
 # Installation
 ## Requirements
