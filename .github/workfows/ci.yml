@@ -1,0 +1,15 @@
+name: 'Package CI'
+
+on: [push, pull_request, commit]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: |
+          composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+      - name: Run CI Commands(Lint, Test)
+        run: |
+          composer ci
