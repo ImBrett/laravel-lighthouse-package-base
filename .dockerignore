@@ -1,0 +1,5 @@
+build/
+vendor/
+phploc.xml
+.phpunit.result.cache
+tests/storage/*.key
