@@ -17,8 +17,8 @@
     }
   ],
   "require": {
-    "php": "^7.4",
-    "nuwave/lighthouse": "^4.8"
+    "php": "^7.4|^8.0",
+    "nuwave/lighthouse": "^5.12"
   },
   "require-dev": {
     "phpunit/phpunit": "^8.5",
@@ -29,21 +29,20 @@
     "jaschilz/php-coverage-badger": "^2.0"
   },
   "scripts": {
-    "post-install-cmd": [
-      "bash git-hooks/install.sh"
-    ],
     "lint": "\"vendor/bin/phpcs\"",
     "lint:fix": "\"vendor/bin/phpcbf\"",
     "test": "\"vendor/bin/phpunit\"",
     "gen:loc": "\"vendor/bin/phploc\" --count-tests src/ tests/ --log-xml phploc.xml",
     "gen:api": "\"vendor/bin/phpdox\"",
     "gen:badge": "\"vendor/bin/php-coverage-badger\" build/logs/clover.xml ./cover-badge.svg",
-    "build": [
-      "@composer lint",
+    "ci": [
+      "@composer lint:fix",
       "@composer test",
       "@composer gen:loc",
-      "@composer gen:api",
       "@composer gen:badge"
+    ],
+    "build": [
+      "@composer gen:api"
     ]
   },
   "autoload": {
