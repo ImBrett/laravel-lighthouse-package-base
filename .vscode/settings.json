@@ -1,8 +1,11 @@
 {
-    "files.exclude": {
-        "vendor": false,
-        "composer.lock": true,
-        ".phpunit.result.cache": true,
-    },
-    "git.ignoreLimitWarning": true
+  "files.exclude": {
+    "vendor": true,
+    "LICENSE": true,
+    "composer.lock": true,
+    "phploc.xml": true,
+    ".phpunit.result.cache": true,
+    "cover-badge.svg": true,
+  },
+  "git.ignoreLimitWarning": true
 }
